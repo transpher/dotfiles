@@ -30,6 +30,7 @@ set statusline=%F%m%r%h%w\=[TYPE=%Y]\[FORMAT=%{&ff}]\[ENC=%{&fileencoding}]\[LOW
 set tabstop=4
 set wrapscan
 set autoindent
+nmap <ESC><ESC> ;nolhsearch<CR><ESC>
 
 if has('gui_macvim')
 	set showtabline=2
@@ -40,3 +41,8 @@ if has('gui_macvim')
 	colorscheme morning
 endif
 
+let twitvim_enable_perl=1
+let twitvim_api_root="https://api.twitter.com/1"
+let twitvim_count=30
+
+let g:neocomplcache_enable_at_startup=1
