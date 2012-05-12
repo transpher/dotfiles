@@ -10,11 +10,12 @@ NeoBundle 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/vimproc'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'Shougo/neocomplcache'
-NeoBundle 'Shougo/clang_complete'
+NeoBundle 'Shougo/neocomplcache-clang_complete'
 NeoBundle 'Shougo/vimfiler'
 NeoBundle 'Shougo/vimshell'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'vim-scripts/TwitVim'
+NeoBundle 'Lokaltog/vim-powerline'
 
 filetype plugin indent on
 filetype on
@@ -30,7 +31,7 @@ set statusline=%F%m%r%h%w\=[TYPE=%Y]\[FORMAT=%{&ff}]\[ENC=%{&fileencoding}]\[LOW
 set tabstop=4
 set wrapscan
 set autoindent
-nmap <ESC><ESC> ;nolhsearch<CR><ESC>
+nmap <ESC><ESC> ;nohlsearch<CR><ESC>
 
 if has('gui_macvim')
 	set showtabline=2
