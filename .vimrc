@@ -85,15 +85,29 @@ endif
 syntax on
 set t_Co=256
 colorscheme wombat
+set backspace=indent,eol,start
 set nu
 set laststatus=2
-set statusline=%F%m%r%h%w\=[TYPE=%Y]\[FORMAT=%{&ff}]\[ENC=%{&fileencoding}]\[ROW=%l/%L]
+set statusline=%<%F%m%r%h%w\%=[TYPE=%Y]\[FORMAT=%{&ff}]\[ENC=%{&fileencoding}]\[ROW=%l/%L]
+set textwidth=0
+set cursorline cursorcolumn
+augroup cch
+    autocmd! cch
+    autocmd WinLeave * set nocursorline nocursorcolumn
+    autocmd WinEnter,BufRead * set cursorline cursorcolumn
+augroup END
+highlight CursorColumn term=reverse cterm=none ctermbg=darkblue
+set expandtab
+set shiftwidth=4
+set softtabstop=4
 set tabstop=4
 set wrapscan
-set autoindent
+set autoindent smartindent
+set whichwrap=b,s,<,>,[,]
 set nobackup
 set noswapfile
-nmap <ESC><ESC> ;nohlsearch<CR><ESC>
+nnoremap <ESC><ESC> :nohlsearch<CR><ESC>
+
 let g:sonictemplate_vim_template_dir='~/.vim/after/template'
 let g:platex_suite_main_file="%:r"
 let g:platex_suite_pdf_viewer="open"
