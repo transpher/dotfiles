@@ -15,6 +15,8 @@ compinit
 
 zstyle ':completion:*' list-colors ''
 
+source ~/dotfiles/incr*.zsh
+
 setopt correct
 setopt auto_pushd
 setopt noautoremoveslash
@@ -33,3 +35,5 @@ esac
 
 alias ls="ls -F --color=auto"
 alias grep="grep --color=auto"
+alias emacs="emacs -nw"
+alias vim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim -u $HOME/.vimrc "$@"'

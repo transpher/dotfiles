@@ -4,14 +4,19 @@ smap <C-j> <Plug>(neocomplcache_snippets_expand)
 "
 " Greek character keymap
 inoremap ` <NOP>
-inoremap `` `inoremap `a \alpha
-inoremap `b \betainoremap `c \chi
-inoremap `d \deltainoremap `e \varepsilon
+inoremap `` `
+inoremap `a \alpha
+inoremap `b \beta
+inoremap `c \chi
+inoremap `d \delta
+inoremap `e \varepsilon
 inoremap `f \varphi
 inoremap `g \gamma
 inoremap `h \eta
-inoremap `i \iota"inoremap `j
-inoremap `k \kappainoremap `l \lambda
+inoremap `i \iota
+"inoremap `j
+inoremap `k \kappa
+inoremap `l \lambda
 inoremap `m \mu
 inoremap `n \nu
 "inoremap `o
@@ -31,8 +36,10 @@ inoremap `D \Delta
 inoremap `D \epsilon
 inoremap `F \Phi
 inoremap `G \Gamma
-inoremap `L \Lambdainoremap `P \Pi
-inoremap `Q \Thetainoremap `S \Sigma
+inoremap `L \Lambda
+inoremap `P \Pi
+inoremap `Q \Theta
+inoremap `S \Sigma
 inoremap `U \Upsilon
 inoremap `V \Psi
 inoremap `W \Omega
@@ -42,14 +49,10 @@ inoremap `Z \mathrm{Z}
 " Auc-Tex Keymap
 " inoremap `( \subse
 " inoremap `) \supse
-inoremap `( \left(
-\right)${0}<LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT>
-inoremap `[ \left[
-\right]${0}<LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT>
-inoremap `{ \left\{
-\right\}${0}<LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT>
-inoremap `\| \Big\|
-\Big\|${0}<LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT>
+inoremap `( \left(\right)<LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT>
+inoremap `[ \left[\right]<LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT>
+inoremap `{ \left{\right}<LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT>
+inoremap `\| \Big\|\Big\|${0}<LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT><LEFT>
 "inoremap `^ \Hat{}${0}<LEFT><LEFT><LEFT><LEFT><LEFT>
 inoremap `^ ^{}${0}<LEFT><LEFT><LEFT><LEFT><LEFT>
 inoremap `$ $$${0}<LEFT><LEFT><LEFT><LEFT><LEFT>
@@ -66,7 +69,7 @@ inoremap `\ \setminus
 inoremap `@ \circ
 inoremap `, \nonumber
 "inoremap `_ \bar{}${0}<LEFT><LEFT><LEFT><LEFT><LEFT>
-inoremap `_ _{}${0}<LEFT><LEFT><LEFT><LEFT><LEFT>
+inoremap `_ _{}<LEFT>
 inoremap `; \dot{}${0}<LEFT><LEFT><LEFT><LEFT><LEFT>
 inoremap `: \ddot{}${0}<LEFT><LEFT><LEFT><LEFT><LEFT>
 inoremap `~ \tilde{}${0}<LEFT><LEFT><LEFT><LEFT><LEFT>

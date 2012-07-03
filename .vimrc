@@ -18,6 +18,8 @@ NeoBundle 'Shougo/vimshell'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'vim-scripts/TwitVim'
 NeoBundle 'lambdalisue/platex.vim'
+"NeoBundle 'thinca/vim-guicolorscheme'
+NeoBundle 'vim-scripts/CSApprox'
 "NeoBundle 'Lokaltog/vim-powerline'
 
 filetype plugin indent on
@@ -84,9 +86,11 @@ endif
 "set fileencodings=iso-2022-jp,sjis,euc-jp
 syntax on
 set t_Co=256
-colorscheme wombat
+"set background=dark
+colorscheme less
 set backspace=indent,eol,start
 set nu
+set wildmenu
 set laststatus=2
 set statusline=%<%F%m%r%h%w\%=[TYPE=%Y]\[FORMAT=%{&ff}]\[ENC=%{&fileencoding}]\[ROW=%l/%L]
 set textwidth=0
@@ -112,14 +116,14 @@ let g:sonictemplate_vim_template_dir='~/.vim/after/template'
 let g:platex_suite_main_file="%:r"
 let g:platex_suite_pdf_viewer="open"
 
-if has('gui_macvim')
-	set showtabline=2
-	set guioptions-=e
-	set imdisable
-	set transparency=10
-	set antialias
-	colorscheme morning
-endif
+"if has('gui_macvim')
+"	set showtabline=2
+"	set guioptions-=e
+"	set imdisable
+"	set transparency=10
+"	set antialias
+"	colorscheme morning
+"endif
 
 let twitvim_enable_perl=1
 let twitvim_api_root="https://api.twitter.com/1"
