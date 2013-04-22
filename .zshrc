@@ -36,4 +36,4 @@ esac
 alias ls="ls -F --color=auto"
 alias grep="grep --color=auto"
 alias emacs="emacs -nw"
-alias vim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim -u $HOME/.vimrc "$@"'
+#alias vim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim -u $HOME/.vimrc "$@"'

@@ -10,6 +10,7 @@ NeoBundle 'Shougo/neobundle.vim'
 NeoBundle 'Shougo/vimproc'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'h1mesuke/unite-outline'
+NeoBundle 'ujihisa/unite-colorscheme'
 NeoBundle 'Shougo/neocomplcache'
 NeoBundle 'Shougo/neocomplcache-clang_complete'
 NeoBundle 'mattn/sonictemplate-vim'
@@ -19,7 +20,7 @@ NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'vim-scripts/TwitVim'
 NeoBundle 'lambdalisue/platex.vim'
 "NeoBundle 'thinca/vim-guicolorscheme'
-NeoBundle 'vim-scripts/CSApprox'
+"NeoBundle 'vim-scripts/CSApprox'
 "NeoBundle 'Lokaltog/vim-powerline'
 
 filetype plugin indent on
@@ -86,8 +87,8 @@ endif
 "set fileencodings=iso-2022-jp,sjis,euc-jp
 syntax on
 set t_Co=256
-"set background=dark
-colorscheme less
+set background=dark
+colorscheme mrkn256
 set backspace=indent,eol,start
 set nu
 set wildmenu
@@ -100,7 +101,7 @@ augroup cch
     autocmd WinLeave * set nocursorline nocursorcolumn
     autocmd WinEnter,BufRead * set cursorline cursorcolumn
 augroup END
-highlight CursorColumn term=reverse cterm=none ctermbg=darkblue
+"highlight CursorColumn term=reverse cterm=none ctermbg=darkblue
 set expandtab
 set shiftwidth=4
 set softtabstop=4
@@ -108,27 +109,38 @@ set tabstop=4
 set wrapscan
 set autoindent smartindent
 set whichwrap=b,s,<,>,[,]
+set splitright
 set nobackup
 set noswapfile
-nnoremap <ESC><ESC> :nohlsearch<CR><ESC>
+noremap <C-j> <Nop>
+"inoremap <Tab> <C-n>
+nnoremap <Silent> <ESC><ESC> :<C-u>nohlsearch<CR><ESC>
+nnoremap <Silent> <F8> :<C-u>source $MYVIMRC<CR>
+nnoremap ZZ <Nop>
+augroup vimrcReload
+    autocmd! vimrcReload
+    autocmd BufWritePost $MYVIMRC source $MYVIMRC
+augroup END
+
+let g:use_xhtml = 1
+let g:html_use_css = 1
+let g:html_no_pre = 1
 
 let g:sonictemplate_vim_template_dir='~/.vim/after/template'
 let g:platex_suite_main_file="%:r"
 let g:platex_suite_pdf_viewer="open"
-
-"if has('gui_macvim')
-"	set showtabline=2
-"	set guioptions-=e
-"	set imdisable
-"	set transparency=10
-"	set antialias
-"	colorscheme morning
-"endif
+let g:platex_suite_bibtex_compiler="pbibtex"
 
 let twitvim_enable_perl=1
 let twitvim_api_root="https://api.twitter.com/1"
 let twitvim_count=30
 
-let g:neocomplcache_enable_at_startup=1
+"let g:neocomplcache_enable_at_startup=1
 let g:neocomplcache_snippets_dir = '~/.vim/after/snippets'
 let g:acp_enableAtStartup=0
+
+"let g:unite_enable_start_insert = 1
+let g:unite_enable_split_vertically = 1
+if globpath(&rtp, 'plugin/unite.vim') != ''
+    nnoremap <F9> :<C-u>Unite colorscheme -input=256 -auto-preview<CR>
+endif
