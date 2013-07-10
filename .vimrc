@@ -19,6 +19,7 @@ NeoBundle 'Shougo/vimshell'
 NeoBundle 'thinca/vim-quickrun'
 NeoBundle 'vim-scripts/TwitVim'
 NeoBundle 'lambdalisue/platex.vim'
+NeoBundle 'sophacles/vim-processing'
 "NeoBundle 'thinca/vim-guicolorscheme'
 "NeoBundle 'vim-scripts/CSApprox'
 "NeoBundle 'Lokaltog/vim-powerline'
@@ -122,6 +123,11 @@ augroup vimrcReload
     autocmd BufWritePost $MYVIMRC source $MYVIMRC
 augroup END
 
+"let g:vimshell_right_prompt='getcwd()'
+"let g:vimshell_split_command='vsplit'
+
+let g:use_processing_java=1
+
 let g:use_xhtml = 1
 let g:html_use_css = 1
 let g:html_no_pre = 1
@@ -135,7 +141,7 @@ let twitvim_enable_perl=1
 let twitvim_api_root="https://api.twitter.com/1"
 let twitvim_count=30
 
-"let g:neocomplcache_enable_at_startup=1
+let g:neocomplcache_enable_at_startup=1
 let g:neocomplcache_snippets_dir = '~/.vim/after/snippets'
 let g:acp_enableAtStartup=0
 
