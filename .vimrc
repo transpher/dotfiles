@@ -124,6 +124,8 @@ augroup vimrcReload
     autocmd BufWritePost $MYVIMRC source $MYVIMRC
 augroup END
 
+let g:vim_markdown_folding_disabled=1
+
 "let g:vimshell_right_prompt='getcwd()'
 "let g:vimshell_split_command='vsplit'
 
