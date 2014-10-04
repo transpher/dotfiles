@@ -50,3 +50,10 @@ alias emacs="emacs -nw"
 alias javac="javac -J-Dfile.encoding=utf-8"
 alias java="java -Dfile.encoding=utf-8"
 #alias vim='env LANG=ja_JP.UTF-8 /Applications/MacVim.app/Contents/MacOS/Vim -u $HOME/.vimrc "$@"'
+#alias beer="ruby -e 'C=`stty size`.scan(/\d+/)[1].to_i;S="\xf0\x9f\x8d\xba";a={};puts "\033[2J";loop{a[rand(C)]=0;a.each{|x,o|;a[x]+=1;print "\033[#{o};#{x}H \033[#{a[x]};#{x}H#{S} \033[0;0H"};$stdout.flush;sleep 0.01}'"
+
+function _calc {
+    echo $(( $@ )) 0x$(([##16] $@ )) 0b$(([##2] $@ ))
+}
+alias c="noglob _calc"
+

@@ -21,6 +21,8 @@ NeoBundle 'vim-scripts/TwitVim'
 NeoBundle 'lambdalisue/platex.vim'
 NeoBundle 'sophacles/vim-processing'
 NeoBundle 'plasticboy/vim-markdown'
+NeoBundle 'fuenor/qfixhowm'
+NeoBundle 'derekwyatt/vim-scala'
 "NeoBundle 'thinca/vim-guicolorscheme'
 "NeoBundle 'vim-scripts/CSApprox'
 "NeoBundle 'Lokaltog/vim-powerline'
@@ -153,3 +155,12 @@ let g:unite_enable_split_vertically = 1
 if globpath(&rtp, 'plugin/unite.vim') != ''
     nnoremap <F9> :<C-u>Unite colorscheme -input=256 -auto-preview<CR>
 endif
+
+let QFixHowm_Key = 'g'
+let howm_dir = '~/howm'
+let howm_filename = '%Y%m%d_%H%M%S.howm'
+let howm_fileencoding = 'utf-8'
+let howm_fileformat = 'unix'
+let QFixHowm_FileType = 'markdown'
+let QFixHowm_SplitMode = 1
+
